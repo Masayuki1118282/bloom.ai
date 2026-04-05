@@ -2,7 +2,7 @@
 
 client_id = "a13f88199fbd9d668c246d311558970e"
 name = "bloom-ai"
-application_url = "https://example.com"
+application_url = "https://bloom-ai-sozoo.vercel.app"
 embedded = true
 
 [build]
@@ -28,4 +28,4 @@ api_version = "2026-04"
 scopes = "write_themes,write_products,read_analytics"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://bloom-ai-sozoo.vercel.app/auth/callback" ]
