@@ -1,0 +1,31 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a13f88199fbd9d668c246d311558970e"
+name = "bloom-ai"
+application_url = "https://example.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2026-04"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  # GDPR Webhook（customers/data_request, customers/redact, shop/redact）は
+  # Partner Dashboardの「App setup」→「GDPR webhooks」で個別に設定すること
+
+[access_scopes]
+# Bloom AIに必要なスコープ
+scopes = "write_themes,write_products,read_analytics"
+
+[auth]
+redirect_urls = [ "https://example.com/api/auth" ]
