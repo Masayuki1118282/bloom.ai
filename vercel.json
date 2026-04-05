@@ -1,10 +1,5 @@
 {
   "buildCommand": "prisma generate && prisma migrate deploy && remix vite:build",
   "installCommand": "npm install",
-  "framework": "remix",
-  "functions": {
-    "build/server/index.js": {
-      "maxDuration": 30
-    }
-  }
+  "framework": "remix"
 }
